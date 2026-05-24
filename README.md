@@ -26,3 +26,8 @@
 <img width="2377" height="1003" alt="mandates_happy_path" src="https://github.com/user-attachments/assets/1206789a-4a24-4f56-bb33-f1987af78a4b" />
 
   
+# Demo
+
+<img width="1920" height="912" alt="chrome_LauK97cTfR" src="https://github.com/user-attachments/assets/55e6f1a1-902f-4c18-97a3-6fa6103e804b" />
+
+
