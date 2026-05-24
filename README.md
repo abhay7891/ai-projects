@@ -1,4 +1,4 @@
-# ai-projects
+# Global mandates - Global business or Retail clients
 
 *Uml designs*
 
