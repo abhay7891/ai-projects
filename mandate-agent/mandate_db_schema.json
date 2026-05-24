@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "_id",
+    "account_ids",
+    "created_at",
+    "free_text_instruction",
+    "legal_entity_id",
+    "mandate_id",
+    "requester",
+    "status"
+  ],
+  "properties": {
+    "_id": {
+      "$ref": "#/$defs/ObjectId"
+    },
+    "account_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "channel": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "customer_segment": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "content_type",
+          "document_id",
+          "document_type",
+          "filename",
+          "sha256_hash",
+          "storage_uri"
+        ],
+        "properties": {
+          "content_type": {
+            "type": "string"
+          },
+          "document_id": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "sha256_hash": {
+            "type": "string"
+          },
+          "storage_uri": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "free_text_instruction": {
+      "type": "string"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "legal_entity_id": {
+      "type": "string"
+    },
+    "mandate_id": {
+      "type": "string"
+    },
+    "product_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requester": {
+      "type": "object",
+      "required": [
+        "name",
+        "requester_type"
+      ],
+      "properties": {
+        "acting_on_behalf_of": {
+          "type": "string"
+        },
+        "authenticated": {
+          "type": "boolean"
+        },
+        "authorized": {
+          "type": "boolean"
+        },
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "requester_id": {
+          "type": "string"
+        },
+        "requester_type": {
+          "type": "string"
+        }
+      }
+    },
+    "risk_rating": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "$ref": "#/$defs/Date"
+    }
+  },
+  "$defs": {
+    "ObjectId": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{24}$"
+        }
+      },
+      "required": [
+        "$oid"
+      ],
+      "additionalProperties": false
+    },
+    "Date": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "$date"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
